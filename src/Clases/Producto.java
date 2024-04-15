@@ -9,7 +9,7 @@ package Clases;
  *
  * @author Nedisane
  */
-public class Producto {
+public class Producto implements Comparable<Producto> {
     
     int codigo;
     String descripcion;
@@ -26,6 +26,11 @@ public class Producto {
         this.precio = precio;
         this.stock = stock;
         this.categoria = categoria;
+    }
+    
+    @Override
+    public int compareTo(Producto otro){
+        return this.codigo - otro.codigo;
     }
 
     //Getter
